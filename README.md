@@ -1,2 +1,18 @@
 # 1-sem-project
-Patients frequently feel anxiety and confusion when they recieve medical reports because they cannot interpret the clinical terms and numerical values.waiting for a doctor's appointment for a basic explanation can be time consuming and stressful.There is a lack of immediate accessible tools that can bridge the knowledge gap between lab result
+project tile : AI medical scan
+code
+import pytesseract
+from PIL import Image
+import google.generativeai as genai
+
+def analyze_report(image_path):
+#step 1: Extract text using OCR
+img = Image.open(image.path)
+extracted_text = pytesseract.image_to_string(img)
+
+#step 2:send to AI for summary
+model = genai.GenerativeModel('gemini-pro')
+prompt = f"Analyze this medical report and summarize it for a patient: {extra }
+response = model.generate_content(prompt)
+
+return response.text
