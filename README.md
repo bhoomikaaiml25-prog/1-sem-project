@@ -1,18 +1,18 @@
-# 1-sem-project
-project tile : AI medical scan
-code
-import pytesseract
-from PIL import Image
-import google.generativeai as genai
+#AI Medical Scan Analyzer
 
-def analyze_report(image_path):
-#step 1: Extract text using OCR
-img = Image.open(image.path)
-extracted_text = pytesseract.image_to_string(img)
+##Project Description 
+This project extracts text from medical reports using OCR and summarizes the report using AI
+## Technologies used 
+pyrhon
+pytesseract 
+PIL
+Google generation AI(Genimi)
+##How it works
+1. Extract text from medical image usi6 OCR
+ 2. Send extracted text ro AI model
+ 3. AI generates summarized medical report
+## Applications 
+Quick understanding of medical reports 
+Helpful for patients 
+save time 
 
-#step 2:send to AI for summary
-model = genai.GenerativeModel('gemini-pro')
-prompt = f"Analyze this medical report and summarize it for a patient: {extra }
-response = model.generate_content(prompt)
-
-return response.text
